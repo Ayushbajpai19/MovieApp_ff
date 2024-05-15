@@ -5,7 +5,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
 
-import 'backend/push_notifications/push_notifications_util.dart';
 import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -48,8 +47,6 @@ class _MyAppState extends State<MyApp> {
   BaseAuthUser? initialUser;
   bool displaySplashImage = true;
 
-  final fcmTokenSub = fcmTokenUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
@@ -61,12 +58,6 @@ class _MyAppState extends State<MyApp> {
       const Duration(milliseconds: 1000),
       () => setState(() => displaySplashImage = false),
     );
-  }
-
-  @override
-  void dispose() {
-    fcmTokenSub.cancel();
-    super.dispose();
   }
 
   void setThemeMode(ThemeMode mode) => setState(() {
@@ -108,7 +99,7 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser!.loggedIn
-              ? const PushNotificationsHandler(child: NavBarPage())
+              ? const NavBarPage()
               : const OnboardingWidget(),
     );
   }

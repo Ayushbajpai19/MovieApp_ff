@@ -5,13 +5,12 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: const FirebaseOptions(
-            apiKey: "AIzaSyBlxQtzD2GOHcl3v5XeIh4MG_3CxEAQutk",
-            authDomain: "movia-2dfed.firebaseapp.com",
-            projectId: "movia-2dfed",
-            storageBucket: "movia-2dfed.appspot.com",
-            messagingSenderId: "799917472062",
-            appId: "1:799917472062:web:08cf2df92b2f5ea086146f",
-            measurementId: "G-TYBP4EZDQK"));
+            apiKey: "AIzaSyD_9ZU1tUSC2JzUJB9ece_TxL3PqxMd1EA",
+            authDomain: "movia-n5aook.firebaseapp.com",
+            projectId: "movia-n5aook",
+            storageBucket: "movia-n5aook.appspot.com",
+            messagingSenderId: "10474073375",
+            appId: "1:10474073375:web:a701c09a13a5e95de7d42a"));
   } else {
     await Firebase.initializeApp();
   }

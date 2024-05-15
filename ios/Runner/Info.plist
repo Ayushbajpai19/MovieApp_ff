@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.799917472062-56si6s42lrrjka150qp88k4inr01oq5i</string>
+                <!--FF_REVERSED_CLIENT_ID-->
                 
             </array>
         </dict>
@@ -43,11 +43,6 @@
 
 
 
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>fetch</string>
-        <string>remote-notification</string>
-    </array>
 
 
 	<key>UILaunchStoryboardName</key>
